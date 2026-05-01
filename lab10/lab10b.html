@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Lab 10 </title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+                background-color: peachpuff;
+                color: darkgoldenrod;
+            }
+        </style>
+    </head>
+
+    <h1> Lab 10: Problem 2 Solution</h1> <br>
+    <body>
+        <form method="post" enctype="multipart/form-data">
+
+        City: <input type="text" name="city"><br><br>
+        Province/State: <input type="text" name="provinceState"><br><br>
+        Country: <input type="text" name="country"><br>
+
+        <h4> Photo </h4>
+        <input type="file" name="photo" accept="image/*">
+
+        <input type="submit" formaction="https://www2.cs.torontomu.ca/~x44huang/cgi-bin/lab10r.cgi" value="Submit to Ruby">
+        <input type="submit" formaction="https://www2.cs.torontomu.ca/~x44huang/cgi-bin/lab10p.cgi" value="Submit to Python">
+    </body>
+</html>
