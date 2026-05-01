@@ -1,0 +1,50 @@
+<!-- 
+For this lab you will create three pages. One Perl script for part A, 
+one html page containing the form for part B and one Perl script for 
+the data processing of part B.
+
+Problem 1:
+Write a Perl program that will display the phrase This is my first Perl
+ program on the browser's window at the top of your page (centre it with CSS). 
+ The phrase must appear in a large font taken from Google fonts and in a colour 
+ that is different from black. Make sure problem 1 works before doing problem 2!
+Name the script lab07a.cgi.
+
+Problem 2:
+Create a customer registration page containing an HTML form where you ask the user’s 
+information: Name (First, Last), address (street name, city, postal code, province), 
+phone number, email address and photograph (file upload).  You may add additional fields 
+if you want. Name your file lab07b.html.
+- On that form you must have a drop-down selection option for provinces. You are free to 
+use more elements. 
+- On form submission: 
+    - The server side Perl script (lab07b.cgi) processes the form inputs and checks for user 
+        input correctness using regular expressions. Form check must be done server-side in Perl, 
+        not client-side in JavaScript
+        - The phone number is the correct length (10) and only contains numbers. 
+        - The postal code has the correct length (7) and has that format (L0L 0L0). 
+        - The email address is correctly formatted.
+        - Upon submission, have the user input errors displayed or highlighted in the resulting page. 
+            Have a link to return to the form there. 
+        - If there is no input error, the resulting page displays all the submitted information 
+            in a visually attractive way (use CSS). 
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Lab 7 </title>
+        <style>
+            body {
+                background-color: aquamarine;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        </style>
+    </head>
+
+    <h1> Lab 7 Solutions </h1>
+
+    <body>
+
+    </body>
+</html>
+
