@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Playfair+Display">
+    <style>
+        .heading { 
+            font-family: "Playfair Display", serif;
+            font-size: xxx-large;
+            color: black;
+            padding: 20px;
+            margin-top: 40px; 
+            margin-bottom: 25px;
+            flex: 1;
+        }
+        .normal {
+            background-color: rgb(237, 232, 245);
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0
+        }
+        .accentbg {
+            background-color: rgb(134, 151, 196);
+            padding: 20px;
+            color: rgb(237, 232, 245)
+        }
+        .navbar {
+            text-decoration: none; 
+            color: black; 
+            font-size: 1.2em; 
+            padding: 5px 10px;
+            list-style-type: none; 
+            display: flex; 
+            gap: 20px; 
+            margin: 0; 
+            padding: 0; 
+            justify-content: right;
+        }
+        .pic {
+            border-radius: 15px; 
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+            margin: 10px;
+        }
+        img:hover {
+            opacity: 0.7;
+            transform: scale(1.05);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        p.bg::first-line {
+            color:rgb(134, 151, 196);
+            font-variant: small-caps;
+            font-size: large ;
+        }
+        a.highlight:hover {
+            font-size: 20px;
+        }
+        summary.txt {
+            cursor: pointer; 
+            padding: 10px; 
+            font-size: 1.2em; 
+            border: 1px solid black; 
+            border-radius: 15px;
+        }
+        details.words {
+            background-color: rgb(134, 151, 196); 
+            border-radius: 10px; 
+            padding: 10px; 
+            margin: 10px 0;
+        }
+        h2 > span {
+            color: rgb(61, 82, 160);
+            font-size: 55px;
+        }
+        .hidden {
+            display: none;
+        }
+        #background:hover .hidden {
+            display:block;
+            width: 50%;
+            margin-top: 10px;
+
+        }
+
+    </style>
+    </head>
+
+    <body class="normal"></body>
+        <header class="accentbg">
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#background"> Background </a></li>
+                    <li><a href="#facts"> Fun Facts </a></li>
+                    <li><a href="#loves"> Interests </a></li>
+                    <li><a href="#contact"> Contact </a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section style="margin-top: 70px; margin-bottom: 45px ; display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                <h2 style="text-align:center;">  
+                    Hi everyone, my name is <br/> <span> Jenny <br/> Huang</span>
+                </h2>
+                <img src="id.webp" alt="pic" width="450" height="450" style="border-radius: 25px;"> 
+            </section>
+
+            <section id="background" style="padding: 20px; display: flex; justify-content: space-evenly; align-items:lefts;">
+                <h1 class="heading" style= "text-align: left;"> A Quick <br/> Background </h1>
+                <article style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+                    <p class="bg" style="background-color: rgb(237, 232, 245); padding: 15px; border-radius: 15px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);">
+                        I'm based in <span style="font-size: medium; color: black;"> </br> DOWNTOWN TORONTO, ONTARIO </span>
+                        <figure>
+                            <img src="toronto.jpg" alt="Toronto" class="hidden">
+                        </figure>
+                    </p>
+                    <p class="bg" style="background-color: rgb(237, 232, 245); padding: 15px; border-radius: 15px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);"> 
+                        I study <span style="font-size: medium; color: black;"> </br> COMPUTER SCIENCE AT TMU (3RD YEAR) </span>
+                        <figure>
+                            <img src="tmu.jpeg" alt="TMU" class="hidden">
+                        </figure>
+                    </p>
+                    <p class="bg" style="background-color: rgb(237, 232, 245); padding: 15px; border-radius: 15px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);"> 
+                        I currently work at <span style="font-size: medium; color: black;"> </br> KOME YOGURT (BARISTA) </span>
+                        <figure>
+                            <img src="kome.webp" alt="Kome Yogurt" class="hidden">
+                        </figure>
+                    </p>
+                </article>
+            </section>
+
+            <article id="facts" class="accentbg">
+                <h1 class="heading" style="text-align: left; color: rgb(237, 232, 245);">Three Fun Facts</h1>
+                
+                <details class="words">
+                    <summary class="txt">I HAVE A CAT</summary>
+                    <p style="padding: 10px; color: black;">I have a cat that is 3 years old.</p>
+                </details>
+            
+                <details class="words">
+                    <summary class="txt">I WASN'T BORN IN CANADA</summary>
+                    <p style="padding: 10px; color: black;">I was born in Fujian, China in 2002. I lived there until my family immigrated to Canada when I was 3 years old.</p>
+                </details>
+            
+                <details class="words">
+                    <summary class="txt">I AM BILINGUAL</summary>
+                    <p style="padding: 10px; color: black;">I can speak fluent English and moderate Mandarin Chinese. (I can also understand Korean.)</p>
+                </details>
+            </article>
+            
+            <h2 class="heading" id="loves" style="text-align: center;"> Things I Love </h2>
+            <section style="display: flex; justify-content: space-evenly; flex-wrap: wrap; padding: 20px; text-align: center;">
+                <figure> 
+                    <img src="malatang.jpg" alt="Malatang" width="200" height="350" class="pic">
+                    <figcaption> food and eating </figcaption>
+                </figure>
+
+                <figure> 
+                    <img src="movies.jpg" alt="Watching Movies" width="200" height="350" class="pic">
+                    <figcaption> watching movies and tv shows </figcaption>
+                </figure>
+
+                <figure> 
+                    <img src="music.jpg" alt="Music" width="200" height="350" class="pic">
+                    <figcaption> music </figcaption>
+                </figure>
+
+                <figure> 
+                    <img src="IMG_3306.jpg" alt="My Cat" width="200" height="200" class="pic">
+                    <figcaption> my cat </figcaption>
+                </figure>
+
+                <figure> 
+                    <img src="cm.webp" alt="Criminal Minds" width="300" height="200" class="pic">
+                    <figcaption> my favourite tv show, Criminal Minds </figcaption>
+                </figure>
+            </section>
+        </main>
+        
+        <footer id="contact" class="accentbg">
+            <h2> Contact Me </h2>
+            <p style="font-size: 1.1em; color: rgb(237, 232, 245);"> Email <br/> <a class="highlight" href="mailto:xinjie.huang@torontomu.ca" style="color: rgb(237, 232, 245); text-decoration: none;">xinjie.huang@torontomu.ca</a></p>
+        </footer>
+    </body>
+</html>

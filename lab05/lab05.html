@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Lab 5 </title>        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close_fullscreen" />
+
+        <style>
+            body {
+                background-color:gainsboro;
+                color: cornflowerblue;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                align-items: center;
+            }
+            section {
+                background-color: cornflowerblue;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                margin: 10px 0;
+                border-radius: 8px;
+            }
+            h1, h3 {
+                text-align: center;
+            }
+            .counter-container {
+                text-align: center;
+                width: 100%;
+            }
+            textarea {
+                width: 50%;
+                height: 100px;
+                font-size: 16px;
+                margin-top: 10px
+            }
+            #closeFullIcon {
+                display: none; 
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 32px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5); 
+                border-radius: 50%;
+                padding: 5px;
+                z-index: 10;
+            }
+            .image-container {
+                position: relative;
+                overflow: hidden;
+            }
+            #iguanna {
+                width: 300px;           
+                height: auto;
+            }
+            
+        </style>
+    </head>
+
+    <h1> Lab 5 Solutions</h1>
+
+    <body>
+        <h3>Question 1</h3>
+        <section>
+            <p> Please Enter Your Name: </p>
+            <input id="name"><span class="error" id="namePart"></span> <br>
+
+            <p> Please Enter Your Address: </p>
+            <input id="address"><br>
+
+            <p> Please Enter Your Phone Number "(111) 222-3333": </p>
+            <input id="phone"><span class="error" id="phonePart"></span><br><br>
+
+            <button type="button" 
+            onclick="validate()"> Submit </button>
+
+            <p id="info"></p>
+                    
+            <script>
+                function validate() {
+                    const nameInput = document.getElementById('name').value;
+                    const addressInput = document.getElementById('address').value;
+                    const phoneInput = document.getElementById('phone').value;
+
+                    let nError = "";   
+                    let pError = "";  
+                    let isValid = true;
+
+                    const nameValid = /^[a-zA-Z]+$/; 
+                    if (!nameValid.test(nameInput)) {
+                        nError = " Invalid Input";
+                        isValid = false;
+                    }
+                    document.getElementById("namePart").innerHTML = nError;
+
+                    const phoneFormat = /^\(\d{3}\) \d{3}-\d{4}$/;
+                    if (!phoneFormat.test(phoneInput)) {
+                        pError = " Invalid, Please Retry with Correct Format";
+                        isValid = false;
+                    }
+                    document.getElementById("phonePart").innerHTML = pError;
+
+                    if (isValid) {
+                        const newPhoneNumb = newPhoneFormat(phoneInput);
+                        display(nameInput, addressInput, newPhoneNumb);
+                    }
+                }
+
+            function newPhoneFormat(phoneInput) {
+                let numb = phoneInput.replace(/\D/g, '');
+                let final = numb.slice(0, 3) + '-' + numb.slice(3, 6) + '-' + numb.slice(6);
+                return final
+            }
+
+            function display(name, address, phone) {
+                document.getElementById('info').innerHTML = 
+                "<p style='background-color: blue; color: white; margin: 10px 0; border-radius: 8px; padding: 20px;'>" +
+                "Name: " + name + "<br>" +
+                "Address: " + address + "<br>" +
+                "Phone Number: " + phone + 
+                "</p>";
+            }
+            </script>
+        </section>
+
+        <h3>Question 2</h3>
+        <section>
+        <div class="counter-container">
+            Enter your message: <br>
+            <form>
+                <textarea id="textInput" placeholder="Type something here..."></textarea>
+            </form>
+
+            <p> Character Count: </p>
+            <p id="character">0</p>
+
+            <p> Letter Only Count: </p>
+            <p id="letter">0</p>
+        </div>
+
+        <script>
+            function updateCount() {
+                const text = document.getElementById('textInput').value;
+                
+                const charCount = text.length;
+                document.getElementById('character').textContent = charCount;
+
+                const letterCount = text.replace(/[^a-zA-Z]/g, '').length;
+                document.getElementById('letter').textContent = letterCount;
+            }
+            document.getElementById('textInput').addEventListener('input', updateCount);
+        </script>
+        </section>
+
+        <h3>Question 3</h3>
+        <section>
+        <div class="image-container">
+            <img id="iguanna" src="lab5image.jpeg" alt="picture">
+            <span id="closeFullIcon" class="material-symbols-outlined">close_fullscreen</span>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#iguanna").click(function(){
+                    $(this).animate({
+                        width: '100vw',
+                        height: 'auto'
+                    }, 4000).addClass('expanded');
+                    $("#closeFullIcon").fadeIn(300);
+                });
+
+                $("#closeFullIcon").click(function(){
+                    $("#iguanna").animate({
+                        width: '300px',
+                        height: 'auto'
+                    }, 4000). removeClass('expanded');
+                    $(this).fadeOut(300);
+                })
+            });
+            </script>
+        </section>
+    </body>
+</html>

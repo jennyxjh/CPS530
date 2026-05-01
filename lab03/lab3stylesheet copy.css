@@ -1,0 +1,333 @@
+@media only screen and (max-width: 1440px) {
+    h1 {
+        color: rgb(0, 56, 184);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        font-size: 50px;
+    }
+    .sub-w {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Consistent font */
+        font-size: 30px; /* Font size for the subtitle */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        position: relative; /* For absolute positioning of the list if needed */
+        top: 0; /* Align to the top */
+    }
+    .sub-b {
+        background-color: white;
+        color: rgb(0, 56, 184);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        font-size: 30px;
+    }
+    h4 {
+        color: rgb(0, 56, 184);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        font-size: 25px;
+    }
+    div h5 {
+        color: rgb(0, 56, 184);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    aside {
+        padding: 10px;
+        max-width: 100%;
+        background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    }
+    aside img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Optional: Rounded corners for a softer look */
+    }
+    aside figcaption {
+        color: rgb(0, 56, 184);
+        text-align: center;
+        padding-top: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    }
+    
+    header {
+        background-color: rgb(0, 56, 184);
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 15px;
+    }
+    *{box-sizing: border-box;}
+    
+    p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: right;
+    }
+    nav ul {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        list-style-type: none;
+        margin: 0;
+    }
+    nav ul li {
+        display: flex;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .blue {
+        background-color:  rgb(0, 56, 184);
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        padding: 20px 0;
+    }
+    
+    .white {
+        background-color:  white;
+        color: rgb(0, 56, 184);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        padding: 20px 0;
+    }
+    
+    body {
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+    
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .blue div p {
+        color: white;
+        text-align: ;
+    }
+    
+    .white div p {
+        color: rgb(0, 56, 184);
+    }
+    
+    
+    div > img {
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+        display: block; /* Makes the image a block-level element */
+        margin: 0 auto;
+    }
+    
+    
+    details {
+        color: rgb(0, 56, 184);
+        background-color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 20px;
+        margin: 0;
+        border: 2px solid rgb(0, 56, 184);
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    summary {
+        list-style: none;
+        padding: 10px 10px 10px 40px;
+        background: url(Star_of_David.svg.png) no-repeat 14px 50%;
+        background-size: 18px;
+    }
+    
+    footer {
+        background-color: rgb(0, 56, 184);                   
+        text-align: center;               
+        padding: 1px;                    
+    }
+    
+    footer p {
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+    }
+    
+    .blue-circle {
+        width: 100px; /* Diameter of the circle */
+        height: 100px; /* Diameter of the circle */
+        background-color: rgb(0, 56, 184); /* Blue color */
+        border-radius: 50%; /* Makes it a circle */
+        margin: 10px auto; /* Centers the circle horizontally */
+        display: flex; /* Enables flexbox for centering the text */
+        align-items: center; /* Centers text vertically */
+        justify-content: center; /* Centers text horizontally */
+        color: white; /* Text color */
+        text-align: center; /* Center the text */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Consistent font */
+    }
+    
+    .travel {
+        list-style-type: decimal; /* Remove bullet points */
+        padding: 0; /* Remove default padding */
+        margin: 20px 0 0; /* Margin for spacing */
+        text-align: center; /* Center the list */
+    
+    }
+    .travel-list li {
+        font-size: 20px; /* Font size for list items */
+        margin: 20px 0; /* Spacing between list items */
+    }
+    
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 100%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    
+    [class*="col-"] {float: left; padding: 15px;}
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    section p {
+        color: rgb(0, 56, 184);
+        padding: 20px;
+    }
+}
+
+
+
+/* Media Queries for Phones in Portrait Orientation */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    h1 {
+        font-size: 26px; /* Smaller font size for headings */
+    }
+    .sub-w {
+        font-size: 20px; /* Subtitle font size adjustment */
+    }
+    .sub-b, h4 {
+        font-size: 18px; /* Adjust font size for subheadings */
+    }
+    p {
+        font-size: 14px; /* Smaller paragraph text */
+    }
+    nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: right; /* Center items */
+    }
+    nav ul {
+        flex-direction: column; /* Stack navigation list items */
+        gap: 5px; /* Adjust spacing between items */
+    }
+    .blue-circle {
+        width: 50px; /* Smaller circle for mobile */
+        height: 50px;
+    }
+    aside img {
+        width: 100%; /* Full width images */
+        height: auto; /* Maintai */
+    }
+    .row {
+        display: block; /* Change to block for mobile devices */
+    }
+    .col-4 {
+        width: 100%; /* Each column takes full width on mobile */
+        padding: 10px; /* Optional padding for spacing */
+    }
+    details {
+        margin-bottom: 10px; /* Add space between details sections */
+    }
+
+}   
+
+/* Media Queries for Phones in Landscape Orientation */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+    h1 {
+        font-size: 28px; /* Slightly larger font size for headings */
+    }
+    .sub-w {
+        font-size: 22px; /* Subtitle font size adjustment */
+    }
+    .sub-b, h4 {
+        font-size: 20px; /* Adjust font size for subheadings */
+    }
+    p {
+        font-size: 16px; /* Paragraph text size */
+    }
+    nav {
+        flex-direction: row; /* Keep navigation items in a row */
+        justify-content: space-between; /* Space items evenly */
+    }
+    nav ul {
+        flex-direction: row; /* Horizontal layout for navigation list items */
+        gap: 10px; /* Maintain spacing between items */
+    }
+    .blue-circle {
+        width: 60px; /* Maintain size for circle */
+        height: 60px;
+    }
+    aside img {
+        width: 100%; /* Full width images */
+        height: auto; /* Maintain aspect ratio */
+    }
+    details {
+        padding: 15px; /* Maintain padding for details */
+    }
+    .travel-list li {
+        font-size: 18px; /* Font size for list items */
+    }
+}
+
+/* Media Queries for Tablets */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 32px; /* Font size for headings */
+    }
+    .sub-w {
+        font-size: 24px; /* Subtitle font size adjustment */
+    }
+    .sub-b, h4 {
+        font-size: 22px; /* Adjust font size for subheadings */
+    }
+    p {
+        font-size: 18px; /* Slightly larger paragraph text */
+    }
+    nav {
+        flex-direction: row; /* Keep navigation items in a row */
+        justify-content: space-around; /* Space items evenly */
+    }
+    nav ul {
+        flex-direction: row; /* Horizontal layout for navigation list items */
+        gap: 15px; /* Spacing between items */
+    }
+    .blue-circle {
+        width: 70px; /* Size for the blue circle */
+        height: 70px;
+    }
+    aside img {
+        width: 100%; /* Full width images */
+        height: auto; /* Maintain aspect ratio */
+    }
+    details {
+        padding: 20px; /* Maintain padding for details */
+    }
+    .travel-list li {
+        font-size: 20px; /* Font size for list items */
+    }
+}
+

@@ -1,0 +1,142 @@
+<!-- lesson #5
+Create one web page containing the solutions to both problems. Une only plain (vanilla) JavaScript. 
+You are not allowed to use frameworks such as jQuery, React or Vue for this lab. Name your file lab04.html.
+-->
+
+<!-- Problem 1 -->
+<!-- Create a function that creates a list of bookmarks for your favourite websites. 
+Have the function display each bookmark URL on a separate line along with an icon 
+indicating if the link is secure or not (https vs. http). Use a closed green padlock 
+icon for secure and an opened red or grey padlock for unsecured. Show at least 2 URLs 
+(one http and one https). 
+-->
+
+<!-- Problem 2 -->
+<!-- A string is a palindrome if it reads the same from front to back as it does from back 
+to front (e.g. "kayak", "rotator"  and "noon" are palindromes). When determining whether 
+an alphanumeric string is a palindrome, we often ignore spaces, punctuation and case in the 
+string (e.g. "A man, a plan, a canal --Panama!" is also considered a palindrome).
+Write a JavaScript function that determines whether a string is a palindrome, and write a message 
+indicating whether it is or isn't. 
+Before that, you will need to write a function to remove all spaces, 
+punctuation, and turn uppercase letters into lowercase letters).
+Use the following strings to test your program. The strings in green are palindromes, the ones in 
+red are not. Write the strings as presented (green for palindromes and red for the other strings).
+ex. 
+Drab as a fool, aloof as a bard. (green)
+It ain't over till it's over (red)
+radar (green)
+When you come to a fork in the road, take it (red)
+Marge lets Norah see Sharon’s telegram. (green) 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Lab 4 </title>
+        <style>
+            .secure {
+                list-style-type: none;
+                background-image: url('gclose.png');
+                background-repeat: no-repeat;
+                background-position: 0 50%;
+                padding-left: 20px;
+                background-size: 10px;
+            }
+            .unsecure {
+                list-style-type: none;
+                background-image: url('ropen.png');
+                background-repeat: no-repeat;
+                background-position: 0 50%;
+                padding-left: 20px;
+                background-size: 10px;
+            }
+            section {
+                padding: 20px; 
+                margin: 20px;
+                background-color:bisque;
+            }
+            body {
+                background-color:pink;
+                color:navy;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            h1 {
+                text-align: center;
+                color: navy;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        </style>
+    </head>
+
+    <h1> Lab 4 Solutions </h1>
+    
+    <body>
+        <section>
+            <h3> Problem 1: Bookmark</h3>
+            <h4> Favourite Bookmarks List: </h4>
+            <ul id="result"> </ul>
+
+            <script>
+                function bkmk() {                    
+                    const bookmarks = [
+                    "https://www.example.com", 
+                    "http://www.example.com",
+                    "https://www.google.com"
+                    ];
+
+                    let resultDiv = document.getElementById("result");
+                    let resultImg = document.getElementById("secure")
+                    resultDiv.innerHTML = "";
+
+                    for (let x of bookmarks) {
+                        let listItem = document.createElement("li"); 
+
+                        if (x.startsWith("https://")) {
+                            listItem.textContent = `${x} -> secure`;
+                            listItem.classList.add("secure");
+                        } 
+                        else {
+                            listItem.textContent = `${x} -> unsecure`;
+                            listItem.classList.add("unsecure");
+                        } 
+
+                    resultDiv.appendChild(listItem); 
+                    }
+                }
+                bkmk();
+            </script>
+        </section>
+        
+        <section>
+            <h3> Problem 2: Palindrome</h3>
+
+            <input type="text" id="pdInput" />
+            <button onclick="palin()">Check Palindrome </button>
+
+            <div id="ans"></div>
+            <script>
+                function palin() {
+                    let palinInput = document.getElementById("pdInput").value;
+                    let oneWord = palinInput.split(" ");
+                    let allLetters = ""
+
+                    for (x of oneWord) {
+                        allLetters += x;
+                    }
+                    let lower = allLetters.toLowerCase();
+                    let final = lower.replace(/[^a-zA-Z]/g, "");
+
+                    let ansDiv = document.getElementById("ans");
+                    
+                    if (final == final.split("").reverse().join(""))
+                        ansDiv.innerHTML = "<span style='color:green;'> This is a palindrome </span>";
+                    else 
+                        ansDiv.innerHTML = "<span style='color:red;'>This is NOT a palindrome </span>";
+                }
+            </script>
+        </section>
+    </body>
+</html>
+    
